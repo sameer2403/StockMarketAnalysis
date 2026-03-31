@@ -102,14 +102,35 @@ Technical analysis using moving average crossovers to identify trends and tradin
 3. **Trend Confirmation**: 20-MA > 50-MA alignment confirms long-term trend direction
 4. **Support/Resistance**: Moving averages act as dynamic support/resistance levels
 
-## �🛠️ Technologies Used
+## 🌐 Streamlit Dashboard
+
+An interactive web application for visualizing and analyzing stock data in real-time.
+
+### Features
+
+- **Stock Selector**: Dropdown menu to select and analyze any of the 4 tech stocks (AAPL, AMZN, GOOG, MSFT)
+- **Closing Price Chart**: Interactive Plotly line chart showing historical closing prices with hover tooltips
+- **Moving Averages**: 10-day, 20-day, and 50-day moving average visualizations for trend analysis
+- **Daily Returns**: Time series chart displaying daily percentage returns
+
+
+### Running the Dashboard
+
+```bash
+streamlit run app.py
+```
+
+The dashboard will launch at `http://localhost:8501` and provides a responsive, user-friendly interface for stock analysis exploration.
+
+## 🛠️ Technologies Used
 
 - **Python 3.7+** - Programming language
 - **Pandas** - Data manipulation and analysis
 - **NumPy** - Numerical computations
 - **Matplotlib** - Static visualizations
 - **Seaborn** - Statistical data visualization
-- **Plotly Express** - Interactive charts (optional)
+- **Plotly Express & Graph Objects** - Interactive charts with hover features
+- **Streamlit** - Web app framework for interactive dashboards
 - **Jupyter Notebook** - Interactive analysis environment
 
 ## 📦 Installation
@@ -122,21 +143,27 @@ Technical analysis using moving average crossovers to identify trends and tradin
 
 2. Install dependencies:
    ```bash
-   pip install pandas numpy matplotlib seaborn plotly jupyter
+   pip install pandas numpy matplotlib seaborn plotly jupyter streamlit
    ```
 
-3. Launch the notebook:
+3. **Option A - Run Jupyter Notebook:**
    ```bash
    jupyter notebook StockPrice.ipynb
    ```
+   Then run cells sequentially to reproduce the analysis
 
-4. Run cells sequentially to reproduce the analysis
+4. **Option B - Run Streamlit Dashboard:**
+   ```bash
+   streamlit run app.py
+   ```
+   Opens interactive dashboard at `http://localhost:8501`
 
 ## 📁 Project Structure
 
 ```
 StockMarketAnalysis/
-├── StockPrice.ipynb           # Main analysis notebook
+├── StockPrice.ipynb           # Main analysis notebook (Jupyter)
+├── app.py                     # Streamlit web dashboard
 ├── README.md                  # Project documentation
 ├── .gitignore                 # Git ignore rules
 └── individual_stocks_5yr/     # Historical CSV data
